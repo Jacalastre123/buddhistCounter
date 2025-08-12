@@ -112,6 +112,8 @@
     <button id="resetLock" onclick="resetLocks()">Reset lock</button>
     <button id="adder" onclick="plus1()"><img src="https://freesvg.org/img/1541102871.png"></button>
     <button id="reset" onclick="resets()">Reset</button>
+        <audio id="budAud" src="/buddhistCounter/medicine-buddha-mantra-remove-illness-heal-bad-karma-find-peace-312725.mp3" loop></audio>
+    <button id="budMus">Music</button>
     </div>
     
 
@@ -121,6 +123,9 @@
         const adder = document.getElementById("adder")
         const reset = document.getElementById("reset")
         const resetLock = document.getElementById("resetLock")
+
+        const budMus = document.getElementById("budMus")
+        const budAud = document.getElementById("budAud")
 
         let count = parseInt(localStorage.getItem("count")) || 0
         let rounds = parseInt(localStorage.getItem("rounds")) || 0
@@ -171,6 +176,19 @@
             }
         }
 
+
+        function budMus() {
+            if (budAud.paused) {
+            budAud.play()
+            }
+
+            else {
+            budAud.pause()
+            }
+            
+
+            
+        }
         
 
 
