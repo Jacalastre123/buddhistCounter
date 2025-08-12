@@ -117,7 +117,7 @@
             count++
             counter.innerHTML = count
             localStorage.setItem("count", count)
-            if (count % 108 === 0) {
+            if (count % 108 === 0 && count > 0) {
                 rounds++
                 rounder.innerHTML = rounds
                 localStorage.setItem("rounds", rounds)
@@ -137,7 +137,7 @@
 
         }
 
-        if (count % 108 === 0) {
+        if (count % 108 === 0 && count > 0) {
                 rounds++
                 rounder.innerHTML = rounds
                 localStorage.setItem("rounds", rounds)
