@@ -56,7 +56,7 @@
             
         }
 
-        button, #adder {
+        button {
             background-color: rgb(0, 101, 196);
             margin: 3px;
             color: white;
@@ -79,8 +79,13 @@
         }
 
         button:disabled {
-            background-color: rgba(0,50,146, 0.8)
+            background-color: rgba(0,50,146, 0.8);
             
+        }
+
+        img {
+            height: 45vh;
+            width:54vh;
         }
     </style>
 </head>
@@ -92,7 +97,7 @@
     </div>
     <div class="buttons">
     <button id="resetLock" onclick="resetLocks()">Reset lock</button>
-    <button id="adder" onclick="plus1()"><img src="https://static.vecteezy.com/system/resources/previews/025/921/126/non_2x/wheel-of-dharma-icon-buddhism-buddhist-religion-spiritual-chakra-buddha-hinduism-zen-faith-black-white-graphic-clipart-artwork-symbol-sign-eps-vector.jpg"></button>
+    <button id="adder" onclick="plus1()"><img src="https://freesvg.org/img/1541102871.png"></button>
     <button id="reset" onclick="resets()">Reset</button>
     </div>
     
