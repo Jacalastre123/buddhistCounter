@@ -13,6 +13,11 @@
 <link rel="manifest" href="/buddhistCounter/site.webmanifest">
     <style>
 
+
+        @fontface {
+            font-family: Seven Segment;
+            src: url('/buddhistCounter/Digital7-rg1mL.ttf') format('truetype');
+        }
         body {
             text-align: center;
             background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvzFntnV72NeHWxl9pgE7qCqWGPgeNm8YcRQ&s");
@@ -71,6 +76,7 @@
             background-color: rgb(170, 197, 181);
             border-radius: 3px;
             border: 1px solid white;
+            font-family: Seven Segment;
         }
 
         .buttons {
@@ -100,7 +106,7 @@
     <div class="screen">
     <h1>Buddha Counter</h1>
     <h2 id="counter">0</h2>
-    <h3 id="rounders">0</h3>
+    <h3 id="rounders">Rounds: 0</h3>
     </div>
     <div class="buttons">
     <button id="resetLock" onclick="resetLocks()">Reset lock</button>
@@ -131,7 +137,7 @@
             localStorage.setItem("count", count)
             if (count % 108 === 0 && count > 0) {
                 rounds++
-                rounder.innerHTML = rounds
+                rounder.innerHTML = "Rounds: " + rounds
                 localStorage.setItem("rounds", rounds)
             }
 
@@ -151,7 +157,7 @@
 
         if (count % 108 === 0 && count > 0) {
                 rounds++
-                rounder.innerHTML = rounds
+                rounder.innerHTML = "Rounds: " + rounds
                 localStorage.setItem("rounds", rounds)
             }
 
