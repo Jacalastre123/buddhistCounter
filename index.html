@@ -109,11 +109,11 @@
     <h3 id="rounders">Rounds: 0</h3>
     </div>
     <div class="buttons">
-    <button id="resetLock" onclick="resetLocks()">Reset lock</button>
+    <button id="resetLock" onclick="resetLocks()">Reset and music lock</button>
     <button id="adder" onclick="plus1()"><img src="https://freesvg.org/img/1541102871.png"></button>
     <button id="reset" onclick="resets()">Reset</button>
         <audio id="budAud" src="/buddhistCounter/medicine-buddha-mantra-remove-illness-heal-bad-karma-find-peace-312725.mp3" loop></audio>
-    <button id="budMus">Music</button>
+    <button id="budMus" onclick="budMusic()">Music</button>
     </div>
     
 
@@ -168,16 +168,18 @@
 
             function resetLocks() {
             reset.disabled = true
+            budMus.disabled = true
             
             
             resetLock.onclick = function() {
                 reset.disabled = false
+                budMus.disabled = false
                 resetLock.onclick = resetLocks
             }
         }
 
 
-        function budMus() {
+        function budMusic() {
             if (budAud.paused) {
             budAud.play()
             }
