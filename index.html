@@ -70,14 +70,16 @@
             line-height: 40px;
             justify-content: center;
             border: 1px solid white;
+            border-radius: 3px;
         }
 
         .screen {
             background-color: rgba(175, 250, 200, 0.6);
             border-radius: 3px;
-            border: 1px solid white;
+            border: 2px solid white;
             font-family: 'Seven Segment', monospace;
             color: black;
+            
         }
 
         .buttons {
@@ -115,7 +117,7 @@
     <div class="screen">
     <h1>Buddha Counter</h1>
     <h2 id="counter">0</h2>
-    <h3 id="rounders">Rounds: 0</h3>
+    <h3 id="rounders">Rounds: 0 (every 108)</h3>
     </div>
     <div class="buttons">
     <button id="resetLock" onclick="resetLocks()">Simple Mode</button>
