@@ -125,6 +125,7 @@
     <button id="reset" onclick="resets()">Reset</button>
         <audio id="budAud" src="/buddhistCounter/medicine-buddha-mantra-remove-illness-heal-bad-karma-find-peace-312725.mp3" loop></audio>
     <button id="budMus" onclick="budMusic()">Music</button>
+        <button id="budMus2" onclick="stopAud()">Stop Audio</button>
     </div>
     
 
@@ -136,6 +137,7 @@
         const resetLock = document.getElementById("resetLock")
 
         const budMus = document.getElementById("budMus")
+        const budMus2 = document.getElementById("budMus2")
         const budAud = document.getElementById("budAud")
 
         let count = parseInt(localStorage.getItem("count")) || 0
@@ -149,6 +151,7 @@
 
         function plus1() {
             count++
+            activateMus()
             counter.innerHTML = count
             localStorage.setItem("count", count)
             if (count % 108 === 0 && count > 0) {
@@ -202,11 +205,28 @@
 
             
         }
-        
+        let audPlay = true
+        function activateMus() {
+            if (audPlay) {
+            const aud2 = new Audio("/BuddhistCounter/light-switch-on-382714.mp3")
+            aud2.play
+            }
+
+            
+        }
+        function stopAud() {
+            if (audPlay) {
+            audPlay = false
+            }
+
+            else {
+                audPlay = true
+            }
+        }
 
 
 
-
+    
     </script>
 </body>
 </html>
