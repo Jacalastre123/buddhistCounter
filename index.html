@@ -111,6 +111,21 @@
             height: 110%;
             width: 85%;
         }
+
+        .activer {
+            background-color: cyan;
+            
+        }
+
+        .pyramid {
+            width: 100%;
+            text-align: center;
+            
+        }
+
+        #dial {
+            background-color: lime;
+        }
     </style>
 </head>
 <body>
@@ -126,8 +141,19 @@
         <audio id="budAud" src="/buddhistCounter/medicine-buddha-mantra-remove-illness-heal-bad-karma-find-peace-312725.mp3" loop></audio>
     <button id="budMus" onclick="budMusic()">Music</button>
         <button id="budMus2" onclick="stopAud()">Stop Audio</button>
+        <button id="rank" onclick="ranking()">Your Level</button>
     </div>
-    
+    <dialog id="dial">
+        <h3>Your Level</h3>
+        <div class="pyramid">
+            <p>Starter (10 or below)</p>
+            <p>Casual (11-500)</p>
+            <p>Focus (501-1000)</p>
+            <p>Extreme (1001-5000)</p>
+            <p>Ultra (5001+)</p>
+        </div>
+        <button onclick="dial.close()">Close</button>
+    </dialog>
 
     <script>
         const counter = document.getElementById("counter")
@@ -135,10 +161,13 @@
         const adder = document.getElementById("adder")
         const reset = document.getElementById("reset")
         const resetLock = document.getElementById("resetLock")
-
+        
         const budMus = document.getElementById("budMus")
         const budMus2 = document.getElementById("budMus2")
         const budAud = document.getElementById("budAud")
+
+        const rank = document.getElementById("rank")
+        const dial = document.getElementById("dial")
 
         let count = parseInt(localStorage.getItem("count")) || 0
         let rounds = parseInt(localStorage.getItem("rounds")) || 0
@@ -223,6 +252,32 @@
                 audPlay = true
             }
         }
+
+        function ranking() {
+            dial.showModal()
+            let levelling = dial.querySelectorAll("p")
+            levelling..forEach(p => p.classList.remove("active"))
+            let i
+                if (count <= 10){
+                    i = 0
+                }
+
+                else if (count <= 500) {
+                    i = 1
+                }
+
+            else if (count <= 1000) {
+                    i = 2
+                }
+            else if (count <= 5000) {
+                    i = 3
+                }
+            else {
+                i = 4
+            }
+            levelling[i].classList.add("activer")
+            }
+        
 
 
 
