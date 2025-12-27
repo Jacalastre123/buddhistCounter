@@ -131,9 +131,8 @@
 
         #dial {
             background-color: green;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            text-align: center;
+            margin: 0;
         }
     </style>
 </head>
@@ -152,6 +151,7 @@
         <button id="budMus2" onclick="stopAud()">Stop Audio</button>
         <button id="rank" onclick="ranking()">Your Level</button>
     </div>
+    
     <dialog id="dial">
         <h3>Your Level</h3>
         <div class="pyramid">
@@ -265,7 +265,7 @@
                 audPlay = true
             }
         }
-
+        
         function ranking() {
             dial.showModal()
             let levelling = dial.querySelectorAll("p")
