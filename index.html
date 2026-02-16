@@ -180,7 +180,11 @@
 
         let count = parseInt(localStorage.getItem("count")) || 0
         let rounds = parseInt(localStorage.getItem("rounds")) || 0
-
+        if (navigator.userAgent.includes("watch") || navigator.userAgent.includes("wear")) {
+            counter.style.fontSize = "40px"
+            rounder.style.fontSize = "20px"
+            
+        }
         localStorage.setItem("count", count)
         localStorage.setItem("rounds", rounds)
 
