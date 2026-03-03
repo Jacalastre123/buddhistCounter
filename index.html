@@ -132,7 +132,7 @@
         #dial {
             background-color: green;
             text-align: center;
-         
+             width: 50vw;
         }
     </style>
 </head>
@@ -158,7 +158,8 @@
             <p>Starter (10 or below)</p>
             <p>Casual (11-500)</p>
             <p>Focus (501-1000)</p>
-            <p>Extreme (1001-5000)</p>
+            <p>Devoted (1001-5000)</p>
+            <p>Extreme (2500-5000)</p>
             <p>Ultra (5001+)</p>
         </div>
         <button onclick="dial.close()">Close</button>
@@ -286,8 +287,11 @@
             else if (count <= 1000) {
                     i = 2
                 }
-            else if (count <= 5000) {
+                   else if (count <= 2500) {
                     i = 3
+                }
+            else if (count <= 5000) {
+                    i = 4
                 }
             else {
                 i = 4
